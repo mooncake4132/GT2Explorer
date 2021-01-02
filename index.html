@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GT2 Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+  <div class="uk-container uk-container-small">
+    <div>
+      <div id="db-drop" class="file-drop uk-placeholder uk-text-center">
+        <span uk-icon="icon: cloud-upload"></span>
+        <span class="uk-text-middle">將時數紀錄檔拖拉至此，或</span>
+        <div uk-form-custom>
+          <input type="file" id="db-input" />
+          <span class="uk-link">點這選擇檔案</span>
+        </div>
+      </div>
+    </div>
+    <div class="uk-alert-danger" id="error"></div>
+
+    <h3 id="title"></h3>
+
+    <div id="data" hidden>
+      <ul uk-tab>
+        <li><a href="#">時數紀錄</a></li>
+        <li><a href="#">游戲存檔</a></li>
+      </ul>
+
+      <ul class="uk-switcher uk-margin">
+        <li>
+          <table class="uk-table" id="playtime-table">
+            <caption></caption>
+            <thead>
+              <tr>
+                <th>時間 (小時)</th>
+                <th>遊玩時間</th>
+                <th>累計遊玩時間</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </li>
+
+        <li>
+          <div id="save-drop" class="file-drop uk-placeholder uk-text-center">
+            <span uk-icon="icon: cloud-upload"></span>
+            <span class="uk-text-middle">將遊戲存檔拖拉至此，或</span>
+            <div uk-form-custom>
+              <input type="file" id="save-input" />
+              <span class="uk-link">點這選擇檔案</span>
+            </div>
+          </div>
+          <div id="save-report">
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>
